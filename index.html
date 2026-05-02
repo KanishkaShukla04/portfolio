@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanishka Shukla | ML Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --text:#ffffff;
+  --sub:#9ca3af;
+  --card:#111;
+  --border:#1f1f1f;
+}
+
+.light{
+  --bg:#ffffff;
+  --text:#0a0a0a;
+  --sub:#555;
+  --card:#f5f5f5;
+  --border:#e5e5e5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(10px);
+  background:rgba(10,10,10,0.6);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+
+nav h2{font-size:16px;}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--sub);
+  font-size:14px;
+}
+
+nav a.active,
+nav a:hover{color:var(--text);}
+
+.toggle{
+  cursor:pointer;
+  border:1px solid var(--border);
+  padding:6px 10px;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 60px;
+  gap:40px;
+}
+
+.hero h1{
+  font-size:56px;
+  line-height:1.1;
+}
+
+.hero p{
+  color:var(--sub);
+  margin:20px 0;
+  max-width:500px;
+}
+
+.btn{
+  padding:12px 20px;
+  border:1px solid var(--text);
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+  margin-right:10px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:var(--text);
+  color:var(--bg);
+}
+
+/* PHOTO */
+.hero-img{
+  width:300px;
+  height:300px;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* SECTION */
+section{
+  padding:100px 60px;
+  border-top:1px solid var(--border);
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:30px;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill{
+  padding:8px 14px;
+  border:1px solid var(--border);
+  font-size:13px;
+  color:var(--sub);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  padding:25px;
+  background:var(--card);
+  border:1px solid var(--border);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--text);
+}
+
+.card h3{margin-bottom:10px;}
+
+.card p{
+  color:var(--sub);
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.card a{
+  text-decoration:none;
+  font-size:13px;
+  color:var(--text);
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin:10px;
+  text-decoration:none;
+  color:var(--text);
+  border-bottom:1px solid var(--text);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:var(--sub);
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s;
+}
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+
+@media(max-width:800px){
+  .hero{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Kanishka</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="toggle" onclick="toggleMode()">☀︎ / ☾</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero fade" id="about">
+  <div>
+    <h1>Building ML Systems<br/>That Scale.</h1>
+    <p>
+      B.Tech CS @ VIT Bhopal. Focused on Machine Learning, NLP & backend systems.
+      I build production-ready ML pipelines — not just notebooks.
+    </p>
+
+    <a href="https://github.com/KanishkaShukla04" target="_blank" class="btn">GitHub</a>
+    <a href="https://www.linkedin.com/in/kanishkashukla04/" target="_blank" class="btn">LinkedIn</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQG2MXpaZn6TKg/profile-displayphoto-shrink_800_800/B4DZdE7ioRHwAg-/0/1749208150725?e=1779321600&v=beta&t=oB1duAe6TItIO8Zp65Mi2kua1qYLyJAAsbOm-JOhNPM">
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+    <div class="skill">C++</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">Scikit-learn</div>
+    <div class="skill">NLP</div>
+    <div class="skill">TensorFlow</div>
+    <div class="skill">REST APIs</div>
+    <div class="skill">Spring Boot</div>
+    <div class="skill">AWS</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>Food AI Safety System</h3>
+      <p>
+        Built an end-to-end ML system for food safety classification with backend API integration.
+        Designed feature engineering pipeline and model evaluation workflow.
+      </p>
+      <p><strong>Add:</strong> Accuracy, dataset size, latency</p>
+      <a href="https://github.com/KanishkaShukla04/food-ai-safety-system" target="_blank">View Project →</a>
+    </div>
+
+    <div class="card">
+      <h3>ML Predictive Model</h3>
+      <p>
+        Developed a supervised ML pipeline with feature engineering, cross-validation,
+        and hyperparameter tuning for improved generalization.
+      </p>
+      <p><strong>Add:</strong> F1-score, improvement</p>
+      <a href="https://github.com/KanishkaShukla04" target="_blank">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact fade">
+  <h2>Contact</h2>
+  <p>Open to ML / AI internships and research opportunities.</p>
+
+  <a href="mailto:kanishkashukla04@gmail.com">Email</a>
+  <a href="https://github.com/KanishkaShukla04" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/kanishkashukla04/" target="_blank">LinkedIn</a>
+</section>
+
+<footer>
+  © 2026 Kanishka Shukla
+</footer>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+
+const faders = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+    }
+  });
+});
+faders.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
